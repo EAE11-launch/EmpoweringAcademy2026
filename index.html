@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Empowering Academy 2026 — Conference Program</title>
+<style>
+  /* ─── Tokens ─────────────────────────────────────────── */
+  :root {
+    --navy:       #0C1E3C;
+    --navy-mid:   #132848;
+    --navy-light: #1B3560;
+    --gold:       #F5C842;
+    --gold-dim:   #C8991E;
+    --teal:       #0D6B6E;
+    --teal-light: #13979B;
+    --white:      #FFFFFF;
+    --off-white:  #EEF2F7;
+    --muted:      #8FA3BB;
+    --text:       #D6E4F5;
+    --card-bg:    rgba(255,255,255,0.04);
+    --card-border:rgba(245,200,66,0.18);
+    --radius:     12px;
+    --radius-sm:  8px;
+    --shadow:     0 4px 24px rgba(0,0,0,0.35);
+  }
+
+  /* ─── Reset ──────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--navy);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 15px;
+  }
+  a { color: var(--gold); text-decoration: none; }
+
+  /* ─── Utility ────────────────────────────────────────── */
+  .sans { font-family: 'Arial', 'Helvetica Neue', sans-serif; }
+  .gold { color: var(--gold); }
+  .muted { color: var(--muted); }
+  .eyebrow {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 99px;
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  /* ─── Layout ─────────────────────────────────────────── */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ─── Hero ───────────────────────────────────────────── */
+  .hero {
+    background: linear-gradient(160deg, #0A1828 0%, #0C2240 40%, #0D5A5C 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 64px 20px 56px;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 20%, rgba(13,107,110,0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 10% 80%, rgba(245,200,66,0.08) 0%, transparent 60%);
+  }
+  .hero-inner { position: relative; z-index: 1; }
+  .hero-org {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+  .org-badge {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 1.5px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; color: var(--gold);
+  }
+  .org-text { text-align: left; }
+  .org-text .top { font-family: 'Arial', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+  .org-text .bot { font-family: 'Arial', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--white); }
+
+  .hero-year {
+    font-family: 'Arial Black', 'Arial', sans-serif;
+    font-size: clamp(52px, 14vw, 96px);
+    font-weight: 900;
+    line-height: 0.9;
+    color: var(--white);
+    letter-spacing: -2px;
+  }
+  .hero-year span { color: var(--gold); }
+  .hero-title {
+    font-family: 'Arial Black', 'Arial', sans-serif;
+    font-size: clamp(36px, 10vw, 72px);
+    font-weight: 900;
+    line-height: 0.95;
+    color: var(--white);
+    letter-spacing: -1px;
+    margin-bottom: 4px;
+  }
+  .hero-subtitle {
+    font-family: 'Arial Black', 'Arial', sans-serif;
+    font-size: clamp(26px, 7vw, 52px);
+    font-weight: 900;
+    color: var(--gold);
+    letter-spacing: -0.5px;
+    margin-bottom: 36px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .hero-chip {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 99px;
+    padding: 8px 18px;
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: var(--white);
+  }
+  .hero-chip .icon { font-size: 15px; }
+  .hero-chip strong { color: var(--gold); }
+  .hero-tagline {
+    margin-top: 28px;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--muted);
+    letter-spacing: 0.3px;
+  }
+  .hero-tagline em { color: var(--gold-dim); font-style: italic; }
+
+  /* ─── Nav strip ──────────────────────────────────────── */
+  .day-nav {
+    background: var(--navy-mid);
+    border-bottom: 1px solid rgba(245,200,66,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .day-nav-inner {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+    scrollbar-width: none;
+  }
+  .day-nav-inner::-webkit-scrollbar { display: none; }
+  .day-tab {
+    flex-shrink: 0;
+    padding: 14px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 2px solid transparent;
+    border-top: none; border-left: none; border-right: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+  .day-tab:hover { color: var(--white); }
+  .day-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+  /* ─── Tab panels ─────────────────────────────────────── */
+  .day-panel { display: none; }
+  .day-panel.active { display: block; }
+
+  /* ─── Schedule item animation ────────────────────────── */
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .day-panel.active .block,
+  .day-panel.active .day-divider {
+    animation: slideIn 0.28s ease both;
+  }
+  .day-panel.active .block:nth-child(1)  { animation-delay: 0.04s; }
+  .day-panel.active .block:nth-child(2)  { animation-delay: 0.09s; }
+  .day-panel.active .block:nth-child(3)  { animation-delay: 0.14s; }
+  .day-panel.active .block:nth-child(4)  { animation-delay: 0.19s; }
+  .day-panel.active .block:nth-child(5)  { animation-delay: 0.24s; }
+  .day-panel.active .block:nth-child(6)  { animation-delay: 0.29s; }
+  .day-panel.active .block:nth-child(7)  { animation-delay: 0.34s; }
+  .day-panel.active .block:nth-child(8)  { animation-delay: 0.39s; }
+  .day-panel.active .block:nth-child(9)  { animation-delay: 0.44s; }
+  .day-panel.active .block:nth-child(10) { animation-delay: 0.49s; }
+  .day-panel.active .block:nth-child(11) { animation-delay: 0.54s; }
+
+  /* ─── Sections ───────────────────────────────────────── */
+  .section { padding: 52px 0; }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .section-day-label {
+    font-family: 'Arial Black', 'Arial', sans-serif;
+    font-size: clamp(28px, 8vw, 44px);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1;
+  }
+  .section-day-label span { color: var(--gold); }
+  .section-date-sub {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ─── Schedule blocks ────────────────────────────────── */
+  .schedule { display: flex; flex-direction: column; gap: 3px; }
+
+  .block {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 0;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    transition: background 0.15s;
+  }
+  .block:hover { background: rgba(255,255,255,0.03); }
+
+  .block-time {
+    padding: 14px 12px 14px 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    line-height: 1.4;
+    text-align: right;
+    padding-top: 16px;
+  }
+
+  .block-body {
+    padding: 12px 16px;
+    border-left: 2px solid transparent;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+
+  /* type variants */
+  .block.worship .block-body  { border-color: #E8AE30; background: rgba(232,174,48,0.07); }
+  .block.session .block-body  { border-color: var(--teal-light); background: rgba(19,151,155,0.07); }
+  .block.break .block-body    { border-color: rgba(255,255,255,0.1); background: rgba(255,255,255,0.02); }
+  .block.admin .block-body    { border-color: rgba(143,163,187,0.3); background: rgba(143,163,187,0.04); }
+  .block.evening .block-body  { border-color: #9B6AF5; background: rgba(155,106,245,0.08); }
+  .block.morning .block-body  { border-color: #4ABFCF; background: rgba(74,191,207,0.07); }
+
+  .block-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+  .block-meta {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .block-meta .speaker { color: #A8CBEA; }
+  .block-meta .venue   { font-style: italic; }
+
+  .track-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .track-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm);
+    padding: 8px 12px;
+    flex: 1;
+    min-width: 150px;
+  }
+  .track-card .track-label { font-family: 'Arial', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 3px; }
+  .track-card .track-name  { font-family: 'Arial', sans-serif; font-size: 12px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+  .track-card .track-venue { font-family: 'Arial', sans-serif; font-size: 10px; color: var(--muted); font-style: italic; }
+
+  /* divider */
+  .day-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(245,200,66,0.2), transparent);
+    margin: 8px 0;
+  }
+
+  /* ─── Speakers ───────────────────────────────────────── */
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  .speaker-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .speaker-avatar {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal), var(--navy-light));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--gold);
+    margin: 0 auto 12px;
+    border: 1.5px solid rgba(245,200,66,0.3);
+  }
+  .speaker-name {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .speaker-role {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    color: var(--muted);
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .speaker-session {
+    font-family: 'Arial', sans-serif;
+    font-size: 10px;
+    color: var(--gold-dim);
+    font-style: italic;
+  }
+
+  /* ─── Info cards ─────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .info-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius);
+    padding: 22px 20px;
+  }
+  .info-card .icon { font-size: 22px; margin-bottom: 10px; display: block; }
+  .info-card h4 {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .info-card p {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* ─── Track legend ───────────────────────────────────── */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .legend-item {
+    display: flex; align-items: center; gap: 6px;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .legend-dot {
+    width: 8px; height: 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* ─── Footer ─────────────────────────────────────────── */
+  footer {
+    background: linear-gradient(180deg, var(--navy-mid) 0%, #070F1C 100%);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(245,200,66,0.12);
+  }
+  footer .footer-logo {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  footer .footer-logo span { color: var(--gold); }
+  footer .footer-sub {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  footer .footer-note {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* ─── Responsive ─────────────────────────────────────── */
+  @media (max-width: 560px) {
+    .block { grid-template-columns: 76px 1fr; }
+    .block-time { font-size: 10px; }
+    .section-day-label { font-size: 28px; }
+    .hero-year { font-size: 52px; }
+    .hero-title { font-size: 36px; }
+    .hero-subtitle { font-size: 28px; }
+    .track-card { min-width: 100%; }
+    .speakers-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ════════════════════════════════════════════ -->
+<header class="hero">
+  <div class="hero-inner">
+
+    <div class="hero-org">
+      <div class="org-badge">✛</div>
+      <div class="org-text">
+        <div class="top">Global Methodist Church</div>
+        <div class="bot">Mega Manila Annual Conference</div>
+      </div>
+    </div>
+
+    <div class="hero-year">20<span>26</span></div>
+    <div class="hero-title">Empowering</div>
+    <div class="hero-subtitle">Academy</div>
+
+    <div class="hero-meta">
+      <div class="hero-chip">
+        <span class="icon">📅</span>
+        <span><strong>June 29 – July 3, 2026</strong></span>
+      </div>
+      <div class="hero-chip">
+        <span class="icon">📍</span>
+        <span><strong>Shepherd's Palace</strong> · Candaba, Pampanga</span>
+      </div>
+    </div>
+
+    <p class="hero-tagline"><em>Spirit-filled learning in the Wesleyan Tradition</em></p>
+
+  </div>
+</header>
+
+<!-- ═══ DAY NAVIGATION ═══════════════════════════════════ -->
+<nav class="day-nav" aria-label="Select day">
+  <div class="day-nav-inner container">
+    <button class="day-tab active" data-target="panel-jun29">Jun 29</button>
+    <button class="day-tab" data-target="panel-jun30">Jun 30</button>
+    <button class="day-tab" data-target="panel-jul01">Jul 01</button>
+    <button class="day-tab" data-target="panel-jul02">Jul 02</button>
+    <button class="day-tab" data-target="panel-jul03">Jul 03</button>
+    <button class="day-tab" data-target="panel-speakers">Speakers</button>
+    <button class="day-tab" data-target="panel-info">Info</button>
+  </div>
+</nav>
+
+<main class="container">
+
+  <!-- ─── Track Legend ─────────────────────────────────── -->
+  <div id="panel-jun29" class="day-panel active">
+  <div class="section" style="padding-bottom: 0;">
+    <p class="eyebrow" style="margin-bottom:12px;">Track Legend</p>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#E8AE30;"></div> Worship / Devotion</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--teal-light);"></div> Academic Track</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#4ABFCF;"></div> Morning Empowerment</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#9B6AF5;"></div> Evening Gathering</div>
+      <div class="legend-item"><div class="legend-dot" style="background:rgba(255,255,255,0.2);"></div> Break / Fellowship</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- DAY 1 · JUNE 29                                    -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="section" id="jun29">
+    <div class="section-header">
+      <div>
+        <div class="section-day-label">June <span>29</span></div>
+        <div class="section-date-sub">Monday · Day 1</div>
+      </div>
+    </div>
+
+    <div class="schedule">
+
+      <div class="block admin">
+        <div class="block-time">7:00<br>9:00</div>
+        <div class="block-body">
+          <div class="block-title">Sound Check &amp; Rehearsal</div>
+          <div class="block-meta">Worship &amp; Media Team with Tech Head</div>
+        </div>
+      </div>
+
+      <div class="block admin">
+        <div class="block-time">8:30<br>9:45</div>
+        <div class="block-body">
+          <div class="block-title">Arrival &amp; Registration</div>
+        </div>
+      </div>
+
+      <div class="day-divider"></div>
+
+      <div class="block worship">
+        <div class="block-time">10:00<br>11:30</div>
+        <div class="block-body">
+          <div class="block-title">Opening Worship Service</div>
+          <div class="block-meta">
+            <span class="speaker">Preacher: Ptr. David Sablan Jr.</span><br>
+            Send-Off Ceremony led by Pastor Perry<br>
+            Worship Team: Cansinala Christian Community / TGHub
+          </div>
+        </div>
+      </div>
+
+      <div class="block admin">
+        <div class="block-time">11:30<br>12:00</div>
+        <div class="block-body">
+          <div class="block-title">Mega Manila Briefing</div>
+        </div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">12:00<br>1:00</div>
+        <div class="block-body">
+          <div class="block-title">Lunch</div>
+        </div>
+      </div>
+
+      <div class="block session">
+        <div class="block-time">1:00<br>2:00</div>
+        <div class="block-body">
+          <div class="block-title">Afternoon Track Sessions</div>
+          <div class="track-row">
+            <div class="track-card">
+              <div class="track-label">Track 1</div>
+              <div class="track-name">Basics of Preaching</div>
+              <div class="track-venue">Daniel's Hall</div>
+            </div>
+            <div class="track-card">
+              <div class="track-label">Track 2</div>
+              <div class="track-name">Methodist History &amp; Doctrine</div>
+              <div class="track-venue">Joseph's Hall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">2:00<br>3:00</div>
+        <div class="block-body">
+          <div class="block-title">Room Check-in &amp; Rest</div>
+        </div>
+      </div>
+
+      <div class="block session">
+        <div class="block-time">3:00<br>5:30</div>
+        <div class="block-body">
+          <div class="block-title">Continued Track Sessions</div>
+          <div class="track-row">
+            <div class="track-card">
+              <div class="track-label">Track 1</div>
+              <div class="track-name">Basics of Preaching</div>
+              <div class="track-venue">Daniel's Hall</div>
+            </div>
+            <div class="track-card">
+              <div class="track-label">Track 2</div>
+              <div class="track-name">Methodist History &amp; Doctrine</div>
+              <div class="track-venue">Joseph's Hall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">5:30<br>6:30</div>
+        <div class="block-body">
+          <div class="block-title">Dinner Fellowship</div>
+        </div>
+      </div>
+
+      <div class="block admin">
+        <div class="block-time">6:30<br>7:00</div>
+        <div class="block-body">
+          <div class="block-title">Preparation for Holy Spirit Night</div>
+          <div class="block-meta muted">Tables to be removed</div>
+        </div>
+      </div>
+
+      <div class="block evening">
+        <div class="block-time">7:00<br>8:30</div>
+        <div class="block-body">
+          <div class="block-title">✦ Holy Spirit Night — Soaking in His Presence</div>
+          <div class="block-meta">
+            <span class="speaker">Preacher: Ptr. Leyda Yambot</span><br>
+            Worship Team: Cansinala Christian Community / TGHub
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </div><!-- /panel-jun29 -->
+
+  <div id="panel-jun30" class="day-panel">
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- DAY 2 · JUNE 30                                    -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="section" id="jun30">
+    <div class="section-header">
+      <div>
+        <div class="section-day-label">June <span>30</span></div>
+        <div class="section-date-sub">Tuesday · Day 2</div>
+      </div>
+    </div>
+
+    <div class="schedule">
+
+      <div class="block break">
+        <div class="block-time">6:30<br>8:00</div>
+        <div class="block-body">
+          <div class="block-title">Breakfast Fellowship</div>
+          <div class="block-meta venue">Daniel's Hall</div>
+        </div>
+      </div>
+
+      <div class="block morning">
+        <div class="block-time">8:00<br>9:00</div>
+        <div class="block-body">
+          <div class="block-title">Morning Empowerment &amp; Prayer</div>
+          <div class="block-meta">
+            <span class="speaker">Bethany Ross</span><br>
+            Worship Team: In House
+          </div>
+        </div>
+      </div>
+
+      <div class="block session">
+        <div class="block-time">9:00<br>12:00</div>
+        <div class="block-body">
+          <div class="block-title">Morning Track Sessions</div>
+          <div class="track-row">
+            <div class="track-card">
+              <div class="track-label">Track 1</div>
+              <div class="track-name">Basics of Preaching</div>
+              <div class="track-venue">Daniel's Hall</div>
+            </div>
+            <div class="track-card">
+              <div class="track-label">Track 2</div>
+              <div class="track-name">Methodist History &amp; Doctrine</div>
+              <div class="track-venue">Joseph's Hall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">12:00<br>1:00</div>
+        <div class="block-body"><div class="block-title">Lunch Fellowship</div></div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">1:00<br>2:00</div>
+        <div class="block-body"><div class="block-title">Rest Time</div></div>
+      </div>
+
+      <div class="block session">
+        <div class="block-time">2:00<br>5:30</div>
+        <div class="block-body">
+          <div class="block-title">Afternoon Track Sessions</div>
+          <div class="track-row">
+            <div class="track-card">
+              <div class="track-label">Track 1</div>
+              <div class="track-name">Basics of Preaching</div>
+              <div class="track-venue">Daniel's Hall</div>
+            </div>
+            <div class="track-card">
+              <div class="track-label">Track 2</div>
+              <div class="track-name">Methodist History &amp; Doctrine</div>
+              <div class="track-venue">Joseph's Hall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">5:30<br>6:30</div>
+        <div class="block-body"><div class="block-title">Dinner Fellowship</div></div>
+      </div>
+
+      <div class="block admin">
+        <div class="block-time">6:30<br>7:00</div>
+        <div class="block-body">
+          <div class="block-title">Preparation for Night of Repentance &amp; Restoration</div>
+        </div>
+      </div>
+
+      <div class="block evening">
+        <div class="block-time">7:00<br>8:30</div>
+        <div class="block-body">
+          <div class="block-title">✦ Night of Repentance &amp; Restoration</div>
+          <div class="block-meta">
+            <span class="speaker">Preacher: Ptr. Robert Parcasio</span><br>
+            Worship Team: Keilah Worship
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </div><!-- /panel-jun30 -->
+
+  <div id="panel-jul01" class="day-panel">
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- DAY 3 · JULY 1                                     -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="section" id="jul01">
+    <div class="section-header">
+      <div>
+        <div class="section-day-label">July <span>01</span></div>
+        <div class="section-date-sub">Wednesday · Day 3</div>
+      </div>
+    </div>
+
+    <div class="schedule">
+
+      <div class="block break">
+        <div class="block-time">6:30<br>8:00</div>
+        <div class="block-body">
+          <div class="block-title">Breakfast Fellowship</div>
+          <div class="block-meta venue">Daniel's Hall</div>
+        </div>
+      </div>
+
+      <div class="block morning">
+        <div class="block-time">8:00<br>9:00</div>
+        <div class="block-body">
+          <div class="block-title">Morning Empowerment &amp; Prayer</div>
+          <div class="block-meta">
+            <span class="speaker">Pastor Geronimo Enerva</span><br>
+            Worship Team: In House
+          </div>
+        </div>
+      </div>
+
+      <div class="block session">
+        <div class="block-time">9:00<br>12:00</div>
+        <div class="block-body">
+          <div class="block-title">Morning Track Sessions</div>
+          <div class="track-row">
+            <div class="track-card">
+              <div class="track-label">Track 1</div>
+              <div class="track-name">Basics of Preaching</div>
+              <div class="track-venue">Daniel's Hall</div>
+            </div>
+            <div class="track-card">
+              <div class="track-label">Track 2</div>
+              <div class="track-name">Methodist History &amp; Doctrine</div>
+              <div class="track-venue">Joseph's Hall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">12:00<br>1:00</div>
+        <div class="block-body"><div class="block-title">Lunch Fellowship</div></div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">1:00<br>2:00</div>
+        <div class="block-body"><div class="block-title">Rest Time</div></div>
+      </div>
+
+      <div class="block session">
+        <div class="block-time">2:00<br>5:30</div>
+        <div class="block-body">
+          <div class="block-title">Afternoon Track Sessions</div>
+          <div class="track-row">
+            <div class="track-card">
+              <div class="track-label">Track 1 · Special</div>
+              <div class="track-name">Healing &amp; Wellness</div>
+              <div class="track-venue">Speaker: Dr. Richard Ramos</div>
+            </div>
+            <div class="track-card">
+              <div class="track-label">Track 2</div>
+              <div class="track-name">Methodist History &amp; Doctrine</div>
+              <div class="track-venue">Joseph's Hall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">5:30<br>6:30</div>
+        <div class="block-body"><div class="block-title">Dinner Fellowship</div></div>
+      </div>
+
+      <div class="block admin">
+        <div class="block-time">6:30<br>7:00</div>
+        <div class="block-body">
+          <div class="block-title">Preparation for Freedom Night</div>
+        </div>
+      </div>
+
+      <div class="block evening">
+        <div class="block-time">7:00<br>8:30</div>
+        <div class="block-body">
+          <div class="block-title">✦ Freedom Night</div>
+          <div class="block-meta">
+            <span class="speaker">Preacher: Ptr. David Jonathan Alcantara</span><br>
+            Worship Team: In House Worship Team
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </div><!-- /panel-jul01 -->
+
+  <div id="panel-jul02" class="day-panel">
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- DAY 4 · JULY 2                                     -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="section" id="jul02">
+    <div class="section-header">
+      <div>
+        <div class="section-day-label">July <span>02</span></div>
+        <div class="section-date-sub">Thursday · Day 4</div>
+      </div>
+    </div>
+
+    <div class="schedule">
+
+      <div class="block break">
+        <div class="block-time">6:30<br>8:00</div>
+        <div class="block-body">
+          <div class="block-title">Breakfast Fellowship</div>
+          <div class="block-meta venue">Daniel's Hall</div>
+        </div>
+      </div>
+
+      <div class="block morning">
+        <div class="block-time">8:00<br>9:00</div>
+        <div class="block-body">
+          <div class="block-title">Morning Empowerment &amp; Prayer</div>
+          <div class="block-meta">
+            <span class="speaker">Pastor Ulysis Ambucay</span><br>
+            Worship Team: In House
+          </div>
+        </div>
+      </div>
+
+      <div class="block session">
+        <div class="block-time">9:00<br>12:00</div>
+        <div class="block-body">
+          <div class="block-title">Morning Track Sessions</div>
+          <div class="track-row">
+            <div class="track-card">
+              <div class="track-label">Track 1</div>
+              <div class="track-name">GMC Constitution</div>
+              <div class="track-venue">Daniel's Hall</div>
+            </div>
+            <div class="track-card">
+              <div class="track-label">Track 2</div>
+              <div class="track-name">Methodist History &amp; Doctrine</div>
+              <div class="track-venue">Joseph's Hall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">12:00<br>1:00</div>
+        <div class="block-body"><div class="block-title">Lunch Fellowship</div></div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">1:00<br>2:00</div>
+        <div class="block-body"><div class="block-title">Rest Time</div></div>
+      </div>
+
+      <div class="block session">
+        <div class="block-time">2:00<br>5:30</div>
+        <div class="block-body">
+          <div class="block-title">Afternoon Track Sessions</div>
+          <div class="track-row">
+            <div class="track-card">
+              <div class="track-label">Track 1</div>
+              <div class="track-name">GMC Constitution</div>
+              <div class="track-venue">Daniel's Hall</div>
+            </div>
+            <div class="track-card">
+              <div class="track-label">Track 2</div>
+              <div class="track-name">Methodist History &amp; Doctrine</div>
+              <div class="track-venue">Joseph's Hall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">5:30<br>6:30</div>
+        <div class="block-body"><div class="block-title">Dinner Fellowship</div></div>
+      </div>
+
+      <div class="block admin">
+        <div class="block-time">6:30<br>7:00</div>
+        <div class="block-body">
+          <div class="block-title">Preparation for Revival Fire Night</div>
+        </div>
+      </div>
+
+      <div class="block evening">
+        <div class="block-time">7:00<br>8:30</div>
+        <div class="block-body">
+          <div class="block-title">✦ Revival Fire Night</div>
+          <div class="block-meta">
+            <span class="speaker">Preacher: Dr. Luther Oconer</span><br>
+            Worship Team: Angeles City Church
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </div><!-- /panel-jul02 -->
+
+  <div id="panel-jul03" class="day-panel">
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- DAY 5 · JULY 3                                     -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="section" id="jul03">
+    <div class="section-header">
+      <div>
+        <div class="section-day-label">July <span>03</span></div>
+        <div class="section-date-sub">Friday · Day 5 · Closing Day</div>
+      </div>
+    </div>
+
+    <div class="schedule">
+
+      <div class="block break">
+        <div class="block-time">6:30<br>8:00</div>
+        <div class="block-body">
+          <div class="block-title">Breakfast Fellowship</div>
+          <div class="block-meta venue">Daniel's Hall</div>
+        </div>
+      </div>
+
+      <div class="block morning">
+        <div class="block-time">8:00<br>9:00</div>
+        <div class="block-body">
+          <div class="block-title">Morning Empowerment &amp; Prayer</div>
+          <div class="block-meta">
+            <span class="speaker">Ruth Labargan</span><br>
+            Worship Team: In House
+          </div>
+        </div>
+      </div>
+
+      <div class="block session">
+        <div class="block-time">9:00<br>12:00</div>
+        <div class="block-body">
+          <div class="block-title">Final Track Sessions</div>
+          <div class="track-row">
+            <div class="track-card">
+              <div class="track-label">Track 1</div>
+              <div class="track-name">GMC Constitution</div>
+              <div class="track-venue">Daniel's Hall</div>
+            </div>
+            <div class="track-card">
+              <div class="track-label">Track 2</div>
+              <div class="track-name">Methodist History &amp; Doctrine</div>
+              <div class="track-venue">Joseph's Hall</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block break">
+        <div class="block-time">12:00<br>1:30</div>
+        <div class="block-body">
+          <div class="block-title">Lunch Fellowship &amp; Room Check-Out</div>
+        </div>
+      </div>
+
+      <div class="day-divider"></div>
+
+      <div class="block worship">
+        <div class="block-time">1:30<br>3:30</div>
+        <div class="block-body">
+          <div class="block-title">★ Closing Program — Certificate Awarding &amp; Worship Service</div>
+          <div class="block-meta">
+            Giving of Certificates<br>
+            <span class="speaker">Closing Preacher: Dr. Ryan Barnett</span><br>
+            Worship Team: In House · No tables setup
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </div><!-- /panel-jul03 -->
+
+  <div id="panel-speakers" class="day-panel">
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SPEAKERS                                           -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="section" id="speakers">
+    <p class="eyebrow" style="margin-bottom:20px;">Preachers &amp; Speakers</p>
+
+    <div class="speakers-grid">
+
+      <div class="speaker-card">
+        <div class="speaker-avatar">RB</div>
+        <div class="speaker-name">Dr. Ryan Barnett</div>
+        <div class="speaker-role">Connectional Operational Officer<br>Midtexas Conference</div>
+        <div class="speaker-session">GMC Constitution · Closing Worship</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-avatar">DS</div>
+        <div class="speaker-name">Ptr. David Sablan Jr.</div>
+        <div class="speaker-role">Guest Preacher</div>
+        <div class="speaker-session">Opening Worship · June 29</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-avatar">LY</div>
+        <div class="speaker-name">Ptr. Leyda Yambot</div>
+        <div class="speaker-role">Guest Preacher</div>
+        <div class="speaker-session">Holy Spirit Night · June 29</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-avatar">RP</div>
+        <div class="speaker-name">Ptr. Robert Parcasio</div>
+        <div class="speaker-role">Guest Preacher</div>
+        <div class="speaker-session">Night of Repentance &amp; Restoration · June 30</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-avatar">DA</div>
+        <div class="speaker-name">Ptr. David Jonathan Alcantara</div>
+        <div class="speaker-role">Guest Preacher</div>
+        <div class="speaker-session">Freedom Night · July 1</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-avatar">LO</div>
+        <div class="speaker-name">Dr. Luther Oconer</div>
+        <div class="speaker-role">Guest Preacher</div>
+        <div class="speaker-session">Revival Fire Night · July 2</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-avatar">BR</div>
+        <div class="speaker-name">Bethany Ross</div>
+        <div class="speaker-role">Morning Empowerment Speaker</div>
+        <div class="speaker-session">Morning Session · June 30</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-avatar">GE</div>
+        <div class="speaker-name">Pastor Geronimo Enerva</div>
+        <div class="speaker-role">Morning Empowerment Speaker</div>
+        <div class="speaker-session">Morning Session · July 1</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-avatar">RR</div>
+        <div class="speaker-name">Dr. Richard Ramos</div>
+        <div class="speaker-role">Special Resource Speaker</div>
+        <div class="speaker-session">Healing &amp; Wellness · July 1</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-avatar">UA</div>
+        <div class="speaker-name">Pastor Ulysis Ambucay</div>
+        <div class="speaker-role">Morning Empowerment Speaker</div>
+        <div class="speaker-session">Morning Session · July 2</div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-avatar">RL</div>
+        <div class="speaker-name">Ruth Labargan</div>
+        <div class="speaker-role">Morning Empowerment Speaker</div>
+        <div class="speaker-session">Morning Session · July 3</div>
+      </div>
+
+    </div>
+  </section>
+  </div><!-- /panel-speakers -->
+
+  <div id="panel-info" class="day-panel">
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- CONFERENCE INFO                                    -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="section" id="info">
+    <p class="eyebrow" style="margin-bottom:20px;">Conference Information</p>
+
+    <div class="info-grid">
+
+      <div class="info-card">
+        <span class="icon">📍</span>
+        <h4>Venue</h4>
+        <p>Shepherd's Palace<br>Candaba, Pampanga</p>
+      </div>
+
+      <div class="info-card">
+        <span class="icon">📅</span>
+        <h4>Dates</h4>
+        <p>June 29 – July 3, 2026<br>5 days · 4 nights</p>
+      </div>
+
+      <div class="info-card">
+        <span class="icon">🏛️</span>
+        <h4>Organizer</h4>
+        <p>Global Methodist Church<br>Mega Manila Annual Conference</p>
+      </div>
+
+      <div class="info-card">
+        <span class="icon">📚</span>
+        <h4>Academic Tracks</h4>
+        <p><strong style="color:var(--white);">Track 1</strong> — Daniel's Hall<br>Basics of Preaching / GMC Constitution<br><br><strong style="color:var(--white);">Track 2</strong> — Joseph's Hall<br>Methodist History &amp; Doctrine</p>
+      </div>
+
+      <div class="info-card">
+        <span class="icon">🎶</span>
+        <h4>Worship Teams</h4>
+        <p>Cansinala Christian Community / TGHub<br>Keilah Worship<br>Angeles City Church<br>In House Worship Team</p>
+      </div>
+
+      <div class="info-card">
+        <span class="icon">🌙</span>
+        <h4>Evening Gatherings</h4>
+        <p>Holy Spirit Night<br>Night of Repentance &amp; Restoration<br>Freedom Night<br>Revival Fire Night</p>
+      </div>
+
+    </div>
+  </section>
+  </div><!-- /panel-info -->
+
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">Empowering <span>Academy</span> 2026</div>
+  <div class="footer-sub">Global Methodist Church · Mega Manila Annual Conference</div>
+  <p class="footer-note">Spirit-filled learning in the Wesleyan Tradition · Shepherd's Palace, Candaba, Pampanga · June 29 – July 3, 2026</p>
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll('.day-tab');
+  const panels = document.querySelectorAll('.day-panel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Deactivate all
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+
+      // Activate clicked
+      tab.classList.add('active');
+      const target = document.getElementById(tab.dataset.target);
+      if (target) {
+        target.classList.add('active');
+        // Scroll tab into view in the nav bar
+        tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        // Scroll page to top of content
+        window.scrollTo({ top: document.querySelector('.day-nav').offsetTop, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
